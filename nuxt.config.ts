@@ -1,5 +1,6 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 // noinspection JSUnusedGlobalSymbols
+// https://nuxt.com/docs/api/configuration/nuxt-config
+
 import path from "path";
 
 export default defineNuxtConfig({
@@ -12,6 +13,61 @@ export default defineNuxtConfig({
             valueUsedOnClientSide: '321'
         }
     },
+    app: {
+        baseURL: '/',
+        cdnURL: '',
+        buildAssetsDir: '/_nuxt/',
+        head: {
+            charset: 'UTF-8',
+            viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        },
+        keepalive: false,
+        pageTransition: {name: 'fade', mode: 'out-in'},
+        layoutTransition: {name: 'slide', mode: 'out-in'},
+        rootId: "__nuxt",
+        rootTag: "div",
+    },
+    srcDir: 'src',
+    dir: {
+        // https://nuxt.com.cn/docs/getting-started/assets#%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95
+        assets: 'assets',
+        public: '../public',
+        pages: 'pages',
+        modules: 'modules',
+        middleware: '../middleware',
+        layouts: 'layouts',
+        plugins: '../plugins',
+    },
+    alias: {
+        "~~": path.resolve(__dirname),
+        "@@": path.resolve(__dirname),
+        "~": path.resolve(__dirname, 'src'),
+        "@": path.resolve(__dirname, 'src'),
+        "@public": path.resolve(__dirname, 'public'),
+        "@assets": path.resolve(__dirname, 'src/assets'),
+        "@components": path.resolve(__dirname, 'src/components'),
+        "@layouts": path.resolve(__dirname, 'src/layouts'),
+    },
+    css: ['@/assets/styles/_global.scss'],
+    tailwindcss: {},
+    vite: {
+        optimizeDeps: {include: []},
+        build: {target: 'modules'},
+        vue: {customElement: true},
+        vueJsx: {mergeProps: true},
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@use "@/assets/styles/_colors.scss" as *;'
+                }
+            }
+        },
+    },
+    modules: ['@nuxtjs/tailwindcss'],
+    devtools: {enabled: true},
+    $production: {routeRules: {'/**': {isr: 60 * 60}}},
+    $development: {},
+    postcss: {},
     routeRules: {
         // 为了SEO目的，在构建时生成
         // '/docs': {isr: false},
@@ -32,74 +88,4 @@ export default defineNuxtConfig({
             crawlLinks: true,
         }
     },
-    app: {
-        baseURL: '/',
-        buildAssetsDir: '/_nuxt/',
-        cdnURL: '',
-        head: {
-            charset: 'utf-8',
-            viewport: 'width=device-width, initial-scale=1'
-        },
-        keepalive: false,
-        // layoutTransition: false,
-        // pageTransition: false,
-        pageTransition: {name: 'fade', mode: 'out-in'},
-        layoutTransition: {
-            name: 'slide',
-            mode: 'out-in'
-        },
-        rootId: "__nuxt",
-        rootTag: "div",
-    },
-    srcDir: 'src',
-    dir: {
-        // https://nuxt.com.cn/docs/getting-started/assets#%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95
-        assets: 'assets',
-        public: '../public',
-        pages: 'pages',
-        modules: 'modules',
-        middleware: '../middleware',
-        layouts: 'layouts',
-        plugins: '../plugins',
-    },
-    alias: {
-        "~": path.resolve(__dirname),
-        "@": path.resolve(__dirname),
-        "@public": path.resolve(__dirname, 'public'),
-        "@assets": path.resolve(__dirname, 'src/assets'),
-        "@components": path.resolve(__dirname, 'src/components'),
-        "@layouts": path.resolve(__dirname, 'src/layouts'),
-    },
-    vite: {
-        optimizeDeps: {
-            include: []
-        },
-        build: {
-            target: 'modules',
-        },
-        vue: {
-            customElement: true
-        },
-        vueJsx: {
-            mergeProps: true
-        },
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/styles/_colors.scss" as *;'
-                }
-            }
-        },
-    },
-    $production: {
-        routeRules: {
-            '/**': {isr: true}
-        }
-    },
-    $development: {},
-    modules: [
-        '@nuxtjs/tailwindcss'
-    ],
-    devtools: {enabled: true},
-    postcss: {},
 })
