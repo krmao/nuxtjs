@@ -1,7 +1,7 @@
 <template>
   <div style="display: flex; flex-direction: column">
     <NuxtLayout name="error-layout" title="From Error">
-      <NuxtPage/>
+      404
     </NuxtLayout>
   </div>
 </template>
