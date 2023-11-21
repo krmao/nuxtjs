@@ -3,6 +3,7 @@
   <NuxtWelcome/>
 </template>
 <script setup>
+import a from '@public/files/pdf.pdf'
 </script>
 <style>
 </style>
