@@ -68,7 +68,13 @@ export default defineNuxtConfig({
     $production: {routeRules: {'/**': {isr: 60 * 60}}},
     $development: {},
     postcss: {},
-    routeRules: {
+    // router: {
+    //     routes: [
+    //         {path: '/', component: 'your-pdf-component'},
+    //         {path: '/pdf', component: 'your-pdf-component'},
+    //     ],
+    // },
+    // routeRules: {
         // 为了SEO目的，在构建时生成
         // '/docs': {isr: false},
         // 缓存1小时
@@ -79,7 +85,7 @@ export default defineNuxtConfig({
         //         to: '/new-page', statusCode: 302
         //     }
         // },
-    },
+    // },
     // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
     nitro: {
         prerender: {
