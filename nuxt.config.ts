@@ -64,7 +64,7 @@ export default defineNuxtConfig({
         },
     },
     modules: ['@nuxt/ui'],
-    devtools: {enabled: false},
+    devtools: {enabled: false, vscode: {}},
     $production: {},
     $development: {},
     postcss: {},
