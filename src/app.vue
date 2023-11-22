@@ -7,6 +7,8 @@
   </div>
 </template>
 <script setup>
+const config = useRuntimeConfig()
+console.log("-- config", config)
 </script>
 <style scoped>
 .root-container {

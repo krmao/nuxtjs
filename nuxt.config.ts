@@ -70,22 +70,18 @@ export default defineNuxtConfig({
     postcss: {},
     routeRules: {
         '/': {
-            isr: true,
-            cache: {maxAge: 60 * 60},
-        },
-        '/@vite/client': {
             isr: false,
             cache: {maxAge: 60 * 60},
-            redirect: {
-                to: '/', statusCode: 302
-            }
+            // redirect: {
+            //     to: '/', statusCode: 302
+            // }
         },
     },
     // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
     nitro: {
         prerender: {
             routes: ['/', '/sitemap.xml', '/robots.txt'],
-            ignore: ['/dynamic'],
+            ignore: [],
             crawlLinks: true,
         }
     },
