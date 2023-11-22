@@ -4,7 +4,7 @@
 import path from 'path'
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   runtimeConfig: {
     valueUsedOnServerSide: '123',
     public: {
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module'],
+  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt'],
   vant: {
     lazyload: { lazyComponent: true },
     importStyle: true,
@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': {
-      isr: true,
+      isr: false,
       cache: { maxAge: 0 }
       // redirect: { to: '/', statusCode: 302 }
     }

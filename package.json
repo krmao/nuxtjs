@@ -19,6 +19,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/stylelint-module": "^5.1.0",
+    "@types/three": "^0.158.3",
     "@vant/nuxt": "^1.0.4",
     "eslint": "^8.54.0",
     "husky": "^8.0.3",
@@ -37,5 +38,11 @@
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tresjs/cientos": "^3.6.0",
+    "@tresjs/nuxt": "^1.2.2",
+    "@tresjs/post-processing": "^0.7.0",
+    "three": "^0.158.0",
+    "tweakpane": "^4.0.1"
+  }
 }
