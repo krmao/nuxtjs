@@ -1,9 +1,11 @@
+// noinspection JSUnusedGlobalSymbols
+
 export default defineAppConfig({
-    title: 'Hello Nuxt',
-    theme: {
-        dark: true,
-        colors: {
-            primary: '#ff0000'
-        }
+  title: 'Nuxt For Mobile',
+  theme: {
+    dark: false,
+    colors: {
+      primary: '#0000ff'
     }
+  }
 })

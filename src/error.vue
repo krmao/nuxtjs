@@ -7,5 +7,5 @@
   </div>
 </template>
 <script setup>
-const {error} = defineProps(['error']);
+const { error } = defineProps(['error'])
 </script>
