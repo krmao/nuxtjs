@@ -101,7 +101,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': {
-      isr: false,
+      isr: true,
       cache: { maxAge: 0 }
       // redirect: { to: '/', statusCode: 302 }
     }
