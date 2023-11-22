@@ -6196,6 +6196,13 @@ postcss-ordered-values@^6.0.0:
     cssnano-utils "^4.0.0"
     postcss-value-parser "^4.2.0"
 
+postcss-px-to-viewport-8-plugin@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/postcss-px-to-viewport-8-plugin/-/postcss-px-to-viewport-8-plugin-1.2.3.tgz#4f357fe82f6ca127ef806de19035c3266e00ceaa"
+  integrity sha512-HRNm9ZE4/7PWw4a6C0GmDxdnSJaQKtKxIqufMpPYymhKJM/3WbZCIuktyE8N5TXinXVIMkOJ1N6erlpoxvNMYA==
+  dependencies:
+    object-assign "^4.1.1"
+
 postcss-reduce-initial@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/postcss-reduce-initial/-/postcss-reduce-initial-6.0.0.tgz#7d16e83e60e27e2fa42f56ec0b426f1da332eca7"
