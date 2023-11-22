@@ -1570,6 +1570,11 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^9.0.3"
 
+"@tweakpane/core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tweakpane/core/-/core-2.0.1.tgz#358d4396d65ae7787e5c92601f6cf657dcb2833b"
+  integrity sha512-iJNrLrLffQR0I8mWgAWcMVO9ZPNdNeXZl66WNT+Op5L9FW7BSF6lwG3izR6Ki9CaI3HzIownwjzYS5xWUaokTA==
+
 "@types/draco3d@^1.4.0":
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/@types/draco3d/-/draco3d-1.4.9.tgz#eb3eb7c5fd6f3490ab86ed7ebf36e595a9dc179b"
