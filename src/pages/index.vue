@@ -4,7 +4,8 @@
     <van-button type="primary" @click="showToast('toast')"> button</van-button>
     <VanButton type="success" @click="showNotify('notify')">button</VanButton>
     <LazyVanButton type="default">lazy button</LazyVanButton>
-    <three-test />
+    <!--    <three-test />-->
+    <three-loader />
   </div>
 </template>
 <script setup></script>
