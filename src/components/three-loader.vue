@@ -23,6 +23,8 @@ loader.load(
     console.log('An error happened', error)
   }
 )
+
+// renderer.render( scene, camera );
 </script>
 
 <template>
