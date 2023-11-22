@@ -1,0 +1,4 @@
+.husky
+.idea
+.nuxt
+node_modules
