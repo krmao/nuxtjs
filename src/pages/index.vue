@@ -1,18 +1,15 @@
 <template>
   <div class="content-container">
     <div>WELCOME TO NUXTJS</div>
-    <UCard :ui="ui"/>
+    <van-button type="primary" @click="showToast('toast')"> button</van-button>
+    <VanButton type="success" @click="showNotify('notify')">button</VanButton>
+    <LazyVanButton type="default">lazy button</LazyVanButton>
   </div>
 </template>
-<script setup>
-const ui = /*ui*/ {
-  background: 'bg-white dark:bg-slate-900'
-}
-</script>
+<script setup></script>
 <style scoped>
 .content-container {
   padding: 10px;
   background: orange;
 }
-
 </style>
