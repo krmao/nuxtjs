@@ -1,6 +1,7 @@
 {
   "extends": ["@nuxtjs/eslint-config-typescript"],
   "rules": {
+    "no-console": "off",
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
     "vue/require-prop-types": "off"

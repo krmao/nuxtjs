@@ -1,15 +1,15 @@
 // noinspection JSUnusedGlobalSymbols
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import path from 'path';
+import path from 'path'
 
 export default defineNuxtConfig({
   ssr: true,
   runtimeConfig: {
     valueUsedOnServerSide: '123',
     public: {
-      valueUsedOnClientSide: '321',
-    },
+      valueUsedOnClientSide: '321'
+    }
   },
   app: {
     baseURL: '/',
@@ -17,14 +17,13 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'UTF-8',
-      viewport:
-        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
+      viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
     },
     keepalive: false,
     pageTransition: { name: 'fade', mode: 'out-in' },
     layoutTransition: { name: 'slide', mode: 'out-in' },
     rootId: '__nuxt',
-    rootTag: 'div',
+    rootTag: 'div'
   },
   srcDir: 'src',
   dir: {
@@ -35,7 +34,7 @@ export default defineNuxtConfig({
     modules: 'modules',
     middleware: '../middleware',
     layouts: 'layouts',
-    plugins: '../plugins',
+    plugins: '../plugins'
   },
   alias: {
     '~~': path.resolve(__dirname),
@@ -45,7 +44,7 @@ export default defineNuxtConfig({
     '@public': path.resolve(__dirname, 'public'),
     '@assets': path.resolve(__dirname, 'src/assets'),
     '@components': path.resolve(__dirname, 'src/components'),
-    '@layouts': path.resolve(__dirname, 'src/layouts'),
+    '@layouts': path.resolve(__dirname, 'src/layouts')
   },
   css: ['@/assets/styles/_global.scss'],
   vite: {
@@ -56,12 +55,12 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/styles/_colors.scss" as *;',
-        },
-      },
-    },
+          additionalData: '@use "@/assets/styles/_colors.scss" as *;'
+        }
+      }
+    }
   },
-  modules: ['@vant/nuxt'],
+  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module'],
   vant: {
     lazyload: { lazyComponent: true },
     importStyle: true,
@@ -69,7 +68,10 @@ export default defineNuxtConfig({
     components: [],
     include: [/\.vue$/, /\.vue\?vue/, /\.vue\?v=/, /\.(([cm])?j|t)sx?$/],
     exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
-    imports: [],
+    imports: []
+  },
+  stylelint: {
+    lintOnStart: false
   },
   devtools: { enabled: false, vscode: {} },
   $production: {},
@@ -78,16 +80,16 @@ export default defineNuxtConfig({
   routeRules: {
     '/': {
       isr: false,
-      cache: { maxAge: 0 },
+      cache: { maxAge: 0 }
       // redirect: { to: '/', statusCode: 302 }
-    },
+    }
   },
   // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
   nitro: {
     prerender: {
       routes: ['/', '/sitemap.xml', '/robots.txt'],
       ignore: [],
-      crawlLinks: true,
-    },
-  },
-});
+      crawlLinks: true
+    }
+  }
+})

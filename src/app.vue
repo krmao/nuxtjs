@@ -2,13 +2,13 @@
 <template>
   <div class="root-container">
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
 <script setup>
 const config = useRuntimeConfig()
-console.log("-- config", config)
+console.log('-- config', config)
 </script>
 <style scoped>
 .root-container {

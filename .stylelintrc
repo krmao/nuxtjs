@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-vue", "stylelint-config-standard-scss"],
+  "customSyntax": "postcss-html",
+  "overrides": [
+    {
+      "files": ["*.vue", "**/*.vue"],
+      "rules": {
+        "unit-allowed-list": ["em", "rem", "s", "px", "%"]
+      }
+    }
+  ]
+}
