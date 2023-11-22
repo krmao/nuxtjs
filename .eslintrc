@@ -1,5 +1,6 @@
 {
   "extends": ["@nuxtjs/eslint-config-typescript"],
+  "ignorePatterns": ["node_modules", ".nuxt", ".idea", ".husky"],
   "rules": {
     "no-console": "off",
     "vue/singleline-html-element-content-newline": "off",
