@@ -1,78 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 For Mobile
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+## init
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
 # yarn
 yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
+# yarn build
+# yarn preview
 ```
 
-## Production
+## modules
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## .nvmrc
-> https://stackoverflow.com/a/39519460/4348530
+- nuxtjs
+- vant
+- prettier with .editorconfig
+- eslint for nuxt
+- [zsh config for .nvmrc](https://stackoverflow.com/a/39519460/4348530)
