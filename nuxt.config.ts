@@ -63,18 +63,16 @@ export default defineNuxtConfig({
             }
         },
     },
-    modules: ['@nuxtjs/tailwindcss'],
+    modules: ['@nuxt/ui'],
     devtools: {enabled: false},
-    $production: {routeRules: {'/**': {isr: 60 * 60}}},
+    $production: {},
     $development: {},
     postcss: {},
     routeRules: {
         '/': {
             isr: false,
-            cache: {maxAge: 60 * 60},
-            // redirect: {
-            //     to: '/', statusCode: 302
-            // }
+            cache: {maxAge: 0},
+            // redirect: { to: '/', statusCode: 302 }
         },
     },
     // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
