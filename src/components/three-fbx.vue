@@ -5,7 +5,7 @@ import { FBXLoader } from 'three-stdlib'
 import * as THREE from 'three'
 // https://threejs.org/docs/#examples/en/loaders/OBJLoader
 
-const { BasicShadowMap, NoToneMapping, Scene, HemisphereLight, DirectionalLight, SRGBColorSpace } = THREE
+const { BasicShadowMap, NoToneMapping, Scene, HemisphereLight, DirectionalLight, PointLight, SRGBColorSpace } = THREE
 
 // 画布
 const gl = {
@@ -23,22 +23,47 @@ const scene = new Scene()
 // region 光源
 // https://stackoverflow.com/a/46005647/4348530
 const hemiLight = new HemisphereLight('#ffffff', '#ffffff', 1)
-const directionalLight = new DirectionalLight('#ffffff', 7)
+const directionalLight = new DirectionalLight('#ffffff', 1)
+const pointLight = new PointLight('#ffffff', 7)
+pointLight.position.set(5, 5, 5)
 directionalLight.position.set(5, 5, 5)
 scene.add(hemiLight)
 scene.add(directionalLight)
+scene.add(pointLight)
 // endregion
-
+//
 const objRootPath = 'http://localhost:3000/objs/'
 const loader = new FBXLoader(undefined)
 loader.setPath(objRootPath)
 loader.load(
-  'test.fbx',
+  'ship/ship.fbx',
   (object) => {
+    console.log('-- onLoad', object)
     const mesh = object
-    mesh.scale.set(0.9, 0.9, 0.9)
+    mesh.scale.set(0.005, 0.005, 0.005)
     mesh.position.x = 0
-    mesh.position.y = -3
+    mesh.position.y = 2
+    mesh.position.z = 0
+    mesh.rotateX(0)
+    mesh.rotateY(0)
+    mesh.rotateZ(0)
+    scene.add(mesh)
+  },
+  (xhr) => {
+    console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+  },
+  (error) => {
+    console.error('Error loading FBX model', error)
+  }
+)
+loader.load(
+  'E-45-Aircraft/E 45 Aircraft_fbx.7.4_binary.fbx',
+  (object) => {
+    console.log('-- onLoad', object)
+    const mesh = object
+    mesh.scale.set(1, 1, 1)
+    mesh.position.x = 0
+    mesh.position.y = -2
     mesh.position.z = 0
     mesh.rotateX(0)
     mesh.rotateY(0)
@@ -54,14 +79,12 @@ loader.load(
 )
 </script>
 <template>
-  <template>
-    <TresCanvas window-size v-bind="gl">
-      <TresPerspectiveCamera :position="[9, 9, 9] as any" />
-      <OrbitControls />
-      <Suspense>
-        <!--suppress HtmlUnknownTag-->
-        <primitive :object="scene" />
-      </Suspense>
-    </TresCanvas>
-  </template>
+  <TresCanvas window-size v-bind="gl">
+    <TresPerspectiveCamera :position="[9, 9, 9] as any" />
+    <OrbitControls />
+    <Suspense>
+      <!--suppress HtmlUnknownTag-->
+      <primitive :object="scene" />
+    </Suspense>
+  </TresCanvas>
 </template>

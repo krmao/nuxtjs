@@ -5,8 +5,8 @@
     <VanButton type="success" @click="showNotify('notify')">button</VanButton>
     <LazyVanButton type="default">lazy button</LazyVanButton>
     <!--    <three-test />-->
-    <three-loader />
-    <!--    <three-fbx />-->
+    <!--    <three-loader />-->
+    <three-fbx />
   </div>
 </template>
 <script setup></script>
