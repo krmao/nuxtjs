@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { OrbitControls } from '@tresjs/cientos'
-import {
-  BasicShadowMap,
-  BoxGeometry,
-  Mesh,
-  MeshBasicMaterial,
-  NoToneMapping,
-  ObjectLoader,
-  Scene,
-  SRGBColorSpace
-} from 'three'
+import { BasicShadowMap, BoxGeometry, Mesh, MeshBasicMaterial, NoToneMapping, Scene, SRGBColorSpace } from 'three'
 import { Vector3 } from 'three/src/math/Vector3'
+// https://threejs.org/docs/#examples/en/loaders/OBJLoader
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
 
 const gl = {
   clearColor: '#82DBC5',
@@ -28,11 +21,11 @@ const meshWithMaterial = new Mesh(geometry, material)
 const scene = new Scene()
 //
 onMounted(() => {
-  new ObjectLoader().load(
+  new OBJLoader().load(
     'objs/P911GT/Porsche_911_GT2.obj',
     (object: any) => {
-      console.log('---- ')
-      scene.add(object.scene)
+      console.log('---- ', object)
+      scene.add(object)
     },
     (xhr) => {
       console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
