@@ -77,6 +77,27 @@ loader.load(
     console.error('Error loading FBX model', error)
   }
 )
+loader.load(
+  '龙山园区222.fbx',
+  (object) => {
+    console.log('-- onLoad', object)
+    const mesh = object
+    mesh.scale.set(0.005, 0.005, 0.005)
+    mesh.position.x = 0
+    mesh.position.y = 4
+    mesh.position.z = 0
+    mesh.rotateX(0)
+    mesh.rotateY(0)
+    mesh.rotateZ(0)
+    scene.add(mesh)
+  },
+  (xhr) => {
+    console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+  },
+  (error) => {
+    console.error('Error loading FBX model', error)
+  }
+)
 </script>
 <template>
   <TresCanvas window-size v-bind="gl">
