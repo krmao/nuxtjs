@@ -78,7 +78,7 @@ loader.load(
   }
 )
 loader.load(
-  '龙山园区222.fbx',
+  'building/building.fbx',
   (object) => {
     console.log('-- onLoad', object)
     const mesh = object
