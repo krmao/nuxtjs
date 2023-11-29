@@ -7,7 +7,8 @@
     <LazyVanButton type="default">lazy button</LazyVanButton>
     <!--<three-test />-->
     <!--<three-loader />-->
-    <three-fbx />
+    <!--    <three-fbx />-->
+    <three-glb />
   </div>
 </template>
 <script>
