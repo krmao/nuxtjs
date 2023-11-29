@@ -4,7 +4,7 @@
 import path from 'path'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   runtimeConfig: {
     valueUsedOnServerSide: '123',
     public: {

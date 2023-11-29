@@ -5,6 +5,7 @@
     "no-console": "off",
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
-    "vue/require-prop-types": "off"
+    "vue/require-prop-types": "off",
+    "space-before-function-paren": "off"
   }
 }
