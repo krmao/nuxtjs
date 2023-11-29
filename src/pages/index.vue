@@ -5,17 +5,18 @@
     <van-button type="primary" @click="showToast('toast')"> button</van-button>
     <VanButton type="success" @click="showNotify('notify')">button</VanButton>
     <LazyVanButton type="default">lazy button</LazyVanButton>
-    <!--    <three-test />-->
-    <!--    <three-loader />-->
+    <!--<three-test />-->
+    <!--<three-loader />-->
     <three-fbx />
   </div>
 </template>
 <script>
-import axios from 'axios'
-
 export default {
-  async asyncData({ params }) {
-    const { data } = await axios.get(`https://my-api/posts/${params.id}`)
+  async asyncData({ _params }) {
+    // nuxt3 不再推荐使用 axios https://nuxt.com/docs/migration/component-options#isomorphic-fetch
+    // https://nuxt.com/docs/getting-started/data-fetching#usefetch
+    // https://stackoverflow.com/a/74679190/4348530
+    const { data } = await $fetch('/api/hello')
     return { title: data.title }
   }
 }
