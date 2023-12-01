@@ -5,7 +5,7 @@
     {
       "files": ["*.vue", "**/*.vue"],
       "rules": {
-        "unit-allowed-list": ["em", "rem", "s", "px", "%"]
+        "unit-allowed-list": ["em", "rem", "s", "px", "%", "vw", "vh"]
       }
     }
   ]
