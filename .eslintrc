@@ -6,6 +6,7 @@
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
     "vue/require-prop-types": "off",
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "unicorn/number-literal-case": "off"
   }
 }

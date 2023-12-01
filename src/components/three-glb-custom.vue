@@ -14,7 +14,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import gsap from 'gsap'
 import LoadProgress from '@components/LoadProgress.vue'
 
-const timer = ref(null)
+// const timer = ref(null)
 // 加载相关
 const percentage = ref(0)
 const loadingText = ref('加载中...')
@@ -67,18 +67,18 @@ const init = () => {
 
   {
     // 环境光
-    const light = new THREE.AmbientLight(0xDAD5B7, 2)
+    const light = new THREE.AmbientLight(0xdad5b7, 2)
     scene.add(light)
   }
 
   {
-    const directionalLight = new THREE.DirectionalLight(0xDAD5B7, 1)
+    const directionalLight = new THREE.DirectionalLight(0xdad5b7, 1)
     directionalLight.position.set(0, 6, 0)
     scene.add(directionalLight)
   }
 
   {
-    const light = new THREE.PointLight(0xDAD5B7, 1, 40)
+    const light = new THREE.PointLight(0xdad5b7, 1, 40)
     light.position.set(5, 3, 5)
     scene.add(light)
   }
@@ -142,8 +142,9 @@ const init = () => {
       })
 
       textGeo.computeBoundingBox()
-      const centerOffset = -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x)
-      const textMaterial = new THREE.MeshBasicMaterial({ color: 0xFFFFFF })
+      const boundingBox = textGeo.boundingBox
+      const centerOffset = boundingBox?.max && boundingBox.min ? -0.5 * (boundingBox.max.x - boundingBox.min.x) : 0
+      const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff })
       const mesh = new THREE.Mesh(textGeo, textMaterial)
       mesh.position.x = centerOffset
       mesh.position.y = 0.04
@@ -227,7 +228,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  timer.value && clearInterval(timer.value)
+  // timer.value && clearInterval(timer.value)
   window.removeEventListener('resize', null)
 })
 </script>
