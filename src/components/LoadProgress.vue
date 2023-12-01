@@ -15,7 +15,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 
-// noinspection TypeScriptValidateTypes
 const props = withDefaults(
   defineProps<{
     modelValue: number
