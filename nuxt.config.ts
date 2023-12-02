@@ -50,15 +50,15 @@ export default defineNuxtConfig({
     '@components': path.resolve(__dirname, 'src/components'),
     '@layouts': path.resolve(__dirname, 'src/layouts')
   },
-  css: ['@/assets/styles/_global.scss'],
+  css: ['@/assets/css/global.scss'],
   vite: {
     optimizeDeps: { include: [] },
     build: { target: 'modules' },
     vue: { customElement: true },
     vueJsx: { mergeProps: true },
-    css: { preprocessorOptions: { scss: { additionalData: '@use "@/assets/styles/_colors.scss" as *;' } } }
+    css: { preprocessorOptions: { scss: { additionalData: '@use "@/assets/css/colors.scss" as *;' } } }
   },
-  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt'],
+  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt', '@nuxtjs/tailwindcss'],
   vant: {
     lazyload: { lazyComponent: true },
     importStyle: true,
