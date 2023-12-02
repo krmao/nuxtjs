@@ -41,6 +41,7 @@ console.log(route.meta.title)
   justify-content: flex-start;
 
   .head-container {
+    padding: 20px;
     width: 375px;
     background: #fff9;
   }
