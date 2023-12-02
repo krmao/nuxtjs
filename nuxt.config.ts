@@ -78,6 +78,10 @@ export default defineNuxtConfig({
   devtools: { enabled: false, vscode: {} },
   postcss: {
     plugins: {
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
+      tailwindcss: {},
+      autoprefixer: {},
       'postcss-px-to-viewport-8-plugin': {
         unitToConvert: 'px', // 需要转换的单位，默认为"px"
         viewportWidth: (filePath: string) => {
