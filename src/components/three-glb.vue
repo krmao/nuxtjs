@@ -32,7 +32,7 @@ scene.add(directionalLight)
 scene.add(pointLight)
 // endregion
 //
-const objRootPath = 'http://localhost:3000/objs/'
+const objRootPath = 'http://localhost:3000/3d/'
 const loader = new GLTFLoader(undefined)
 loader.setPath(objRootPath)
 loader.load(

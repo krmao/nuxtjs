@@ -50,7 +50,7 @@ scene.add(hemiLight)
 scene.add(directionalLight)
 // endregion
 
-const objRootPath = 'http://localhost:3000/objs/'
+const objRootPath = 'http://localhost:3000/3d/'
 const objLoader = new OBJLoader(undefined)
 
 const loadCube = () => {
@@ -65,7 +65,7 @@ const loadCube = () => {
 
 const loadAir = () => {
   const mtlLoader = new MTLLoader(undefined)
-  const meshDirPath = objRootPath + 'E-45-Aircraft/'
+  const meshDirPath = objRootPath + 'plane/'
   mtlLoader.setPath(meshDirPath)
   mtlLoader.setMaterialOptions({ invertTrProperty: true })
   mtlLoader.load(
@@ -107,10 +107,10 @@ const loadAir = () => {
 }
 
 const loadCar = () => {
-  const meshDirPath = objRootPath + 'P911GT/'
+  const meshDirPath = objRootPath + 'car/'
   objLoader.setPath(meshDirPath)
   objLoader.load(
-    'Porsche_911_GT2.obj',
+    'car.obj',
     (object: any) => {
       console.log('-------- onLoad', object)
       const mesh = object

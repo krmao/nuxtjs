@@ -5,11 +5,17 @@
     </div>
     <div class="content-container">
       <div class="head-container">
-        <h1>{{ (data as any).length }}</h1>
-        <div>WELCOME TO NUXTJS</div>
-        <van-button type="primary" @click="showToast('toast')"> button</van-button>
-        <VanButton type="success" @click="showNotify('notify')">button</VanButton>
-        <LazyVanButton type="default">lazy button</LazyVanButton>
+        <div class="m-5 flex flex-auto justify-center bg-pink-400 p-5">
+          <h1>WELCOME TO NUXTJS</h1>
+        </div>
+        <div class="m-5 flex flex-auto justify-center bg-orange-300 p-5">
+          <h1>{{ (data as any).length }}</h1>
+        </div>
+        <div class="m-5 flex flex-auto justify-evenly bg-blue-400 p-5">
+          <van-button type="primary" @click="showToast('toast')"> button</van-button>
+          <VanButton type="success" @click="showNotify('notify')">button</VanButton>
+          <LazyVanButton type="default">lazy button</LazyVanButton>
+        </div>
       </div>
     </div>
   </div>
@@ -41,7 +47,6 @@ console.log(route.meta.title)
   justify-content: flex-start;
 
   .head-container {
-    padding: 20px;
     width: 375px;
     background: #fff9;
   }

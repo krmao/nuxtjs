@@ -32,7 +32,7 @@ scene.add(directionalLight)
 scene.add(pointLight)
 // endregion
 //
-const objRootPath = 'http://localhost:3000/objs/'
+const objRootPath = 'http://localhost:3000/3d/'
 const loader = new FBXLoader(undefined)
 loader.setPath(objRootPath)
 loader.load(
@@ -57,7 +57,7 @@ loader.load(
   }
 )
 loader.load(
-  'E-45-Aircraft/E 45 Aircraft_fbx.7.4_binary.fbx',
+  'plane/E 45 Aircraft_fbx.7.4_binary.fbx',
   (object) => {
     console.log('-- onLoad', object)
     const mesh = object

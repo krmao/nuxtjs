@@ -18,7 +18,7 @@ import LoadProgress from '@components/LoadProgress.vue'
 // 加载相关
 const percentage = ref(0)
 const loadingText = ref('加载中...')
-const objRootPath = 'http://localhost:3000/3D/'
+const objRootPath = 'http://localhost:3000/3d/'
 
 const init = () => {
   const renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -43,7 +43,7 @@ const init = () => {
   {
     const rgbeLoader = new RGBELoader()
     rgbeLoader.setPath(objRootPath)
-    rgbeLoader.loadAsync('model/time_hdr.hdr').then((texture) => {
+    rgbeLoader.loadAsync('building/time_hdr.hdr').then((texture) => {
       texture.mapping = THREE.EquirectangularReflectionMapping
       scene.environment = texture
     })
@@ -86,13 +86,13 @@ const init = () => {
   const textLoader = new THREE.TextureLoader()
   textLoader.setPath(objRootPath)
 
-  // const texture = textLoader.load("model/z1.png");
+  // const texture = textLoader.load('building/z1.png');
   // texture.rotation = Math.PI / 2;
   // texture.repeat.set(1, 1);
 
   const glbLoader = new GLTFLoader()
   glbLoader.setPath(objRootPath)
-  glbLoader.load('model/mesh.glb', (obj) => {
+  glbLoader.load('building/mesh.glb', (obj) => {
     // console.log(obj.scene);
     obj.scene.position.set(0, 0.02, 0)
     // obj.scene.traverse(child => {
@@ -107,16 +107,16 @@ const init = () => {
     scene.add(obj.scene)
   })
 
-  glbLoader.load('model/pcs.glb', (obj) => {
+  glbLoader.load('building/pcs.glb', (obj) => {
     scene.add(obj.scene)
   })
 
-  glbLoader.load('model/cabinet.glb', (obj) => {
+  glbLoader.load('building/cabinet.glb', (obj) => {
     const g230 = obj.scene.clone()
     scene.add(g230)
   })
 
-  glbLoader.load('model/car.glb', (obj) => {
+  glbLoader.load('building/car.glb', (obj) => {
     for (let i = 1; i <= 19; i += 1) {
       const car = obj.scene.clone()
       car.position.x = 0.125 * (i - 7)
@@ -128,7 +128,7 @@ const init = () => {
   {
     const loader = new FontLoader()
     loader.setPath(objRootPath)
-    loader.load('model/font.json', (font) => {
+    loader.load('building/font.json', (font) => {
       const group = new THREE.Group()
       group.position.y = 0.25
       const textGeo = new TextGeometry('逆变器', {
@@ -152,7 +152,7 @@ const init = () => {
 
       const geometry = new THREE.BoxGeometry(0.33, 0.24, 0.01, 1, 1, 1)
       const material = new THREE.MeshBasicMaterial({
-        map: textLoader.load('model/sprite_icon.png'),
+        map: textLoader.load('building/sprite_icon.png'),
         transparent: true
       })
       const icon = new THREE.Mesh(geometry, material)
