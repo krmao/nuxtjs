@@ -15,11 +15,12 @@
   </div>
 </template>
 <script setup lang="ts">
-definePageMeta({ title: '首页' })
-const res = await useAsyncData('post', () => $fetch('http://api.tvmaze.com/search/shows?q=marvel'))
-const data = await res.data
-const route = useRoute()
-console.log(route.meta.title)
+definePageMeta({ title: '首页' });
+const res = await useAsyncData('post', () => $fetch('http://api.tvmaze.com/search/shows?q=marvel'));
+const data = await res.data;
+const route = useRoute();
+
+console.log(route.meta.title);
 </script>
 <style scoped>
 .root-container {
