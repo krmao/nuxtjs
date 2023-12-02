@@ -60,6 +60,7 @@ export default defineNuxtConfig({
   },
   modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt', '@nuxtjs/tailwindcss'],
   vant: {
+    // for compat pc https://github.com/youzan/vant/tree/main/packages/vant-touch-emulator
     lazyload: { lazyComponent: true },
     importStyle: true,
     excludeExports: ['Lazyload', 'Locale'],

@@ -14,6 +14,7 @@ yarn dev
 
 - nuxtjs
 - vant
+  - for compat pc https://github.com/youzan/vant/tree/main/packages/vant-touch-emulator
 - prettier with .editorconfig
 - eslint for nuxt
 - [zsh config for .nvmrc](https://stackoverflow.com/a/39519460/4348530)
