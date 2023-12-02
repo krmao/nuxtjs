@@ -58,7 +58,12 @@ export default defineNuxtConfig({
     vueJsx: { mergeProps: true },
     css: { preprocessorOptions: { scss: { additionalData: '@use "@/assets/css/colors.scss" as *;' } } }
   },
-  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt', '@nuxtjs/tailwindcss'],
+  modules: ['@vant/nuxt', '@nuxtjs/stylelint-module', '@tresjs/nuxt', '@nuxtjs/tailwindcss', 'nuxt-svgo'],
+  svgo: {
+    global: true,
+    componentPrefix: 'svg',
+    autoImportPath: './assets/image/svg/'
+  },
   vant: {
     // for compat pc https://github.com/youzan/vant/tree/main/packages/vant-touch-emulator
     lazyload: { lazyComponent: true },
