@@ -10,7 +10,7 @@
         <van-button type="primary" @click="showToast('toast')"> button</van-button>
         <VanButton type="success" @click="showNotify('notify')">button</VanButton>
         <LazyVanButton type="default">lazy button</LazyVanButton>
-        <svg-calendar class="h-10 w-10" :fontControlled="false" filled />
+        <svg-calendar class="h-[10px] w-[10px]" :fontControlled="false" filled />
       </div>
     </div>
   </div>
