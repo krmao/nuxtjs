@@ -5,7 +5,8 @@
     {
       "files": ["*.vue", "**/*.vue"],
       "rules": {
-        "unit-allowed-list": ["em", "rem", "s", "px", "%", "vw", "vh"]
+        "unit-allowed-list": ["em", "rem", "s", "px", "%", "vw", "vh"],
+        "color-hex-length": "off"
       }
     }
   ]

@@ -1,11 +1,7 @@
 <template>
   <div class="root-container">
-    <!--<three-test />-->
-    <!--<three-loader />-->
-    <!--    <three-fbx />-->
-    <!--    <three-glb />-->
     <div class="content-3d">
-      <three-glb-custom />
+      <!-- <three-glb-custom />-->
     </div>
     <div class="content-container">
       <div class="head-container">
@@ -19,17 +15,23 @@
   </div>
 </template>
 <script setup lang="ts">
+definePageMeta({ title: '首页' })
 const res = await useAsyncData('post', () => $fetch('http://api.tvmaze.com/search/shows?q=marvel'))
 const data = await res.data
+const route = useRoute()
+console.log(route.meta.title)
 </script>
 <style scoped>
 .root-container {
   position: relative;
-  background: #fefefe;
+  width: 100%;
+  height: 100%;
+  background: cornflowerblue;
 }
 
 .content-container {
-  padding: 10px;
+  width: 100%;
+  height: 100%;
   background: transparent;
   position: absolute;
   inset: 0;
@@ -39,13 +41,15 @@ const data = await res.data
   justify-content: flex-start;
 
   .head-container {
-    padding: 15px;
+    width: 375px;
     background: #fff9;
   }
 }
 
 .content-3d {
   position: absolute;
+  width: 100%;
+  height: 100%;
   inset: 0;
   z-index: 0;
 }

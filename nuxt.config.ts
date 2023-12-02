@@ -99,18 +99,10 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    '/': {
-      isr: false,
-      cache: { maxAge: 0 }
-      // redirect: { to: '/', statusCode: 302 }
-    }
-  },
-  // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
-  nitro: {
-    prerender: {
-      routes: ['/', '/sitemap.xml', '/robots.txt'],
-      ignore: [],
-      crawlLinks: true
-    }
+    '/': { isr: false, cache: { maxAge: 0 } }
   }
+  // region nitro
+  // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
+  // nitro: undefined // 前后端分离项目不需要 nitro 插件
+  // endregion
 })

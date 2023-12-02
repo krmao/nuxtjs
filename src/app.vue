@@ -8,7 +8,7 @@
 </template>
 <script setup>
 const config = useRuntimeConfig()
-console.log('-- config', config)
+console.log('> [App.vue] config=', config)
 </script>
 <style scoped>
 .root-container {
@@ -16,9 +16,10 @@ console.log('-- config', config)
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  background: cornflowerblue;
+  background: #fefefe;
 }
 </style>

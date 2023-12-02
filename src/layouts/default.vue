@@ -8,7 +8,10 @@
 <script setup></script>
 <style scoped>
 .layout-container {
-  padding: 10px;
-  background: deeppink;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fefefe;
 }
 </style>
