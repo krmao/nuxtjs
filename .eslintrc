@@ -9,6 +9,7 @@
     "space-before-function-paren": "off",
     "unicorn/number-literal-case": "off",
     "no-lonely-if": "off",
+    "vue/attribute-hyphenation": "off",
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
   }

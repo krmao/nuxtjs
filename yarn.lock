@@ -6525,6 +6525,11 @@ pathe@^1.1.0, pathe@^1.1.1:
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-1.1.1.tgz#1dd31d382b974ba69809adc9a7a347e65d84829a"
   integrity sha512-d+RQGp0MAYTIaDBIMmOfMwz3E+LOZnxx1HZd5R18mmCZY0QBlK0LDZfPc8FW8Ed2DlvsuE6PRjroDY+wg4+j/Q==
 
+pdf-vue3@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/pdf-vue3/-/pdf-vue3-1.0.11.tgz#f52a2f2bcaa04142930a4cb580ad708df08b9300"
+  integrity sha512-H1lvEWMut1mk11EMNhjyCrzgJd05trabAOHcGgwYIFENBExvSjGzUCHj3Mry/SJ+CVqTvNc5frw9WYVvApU7vQ==
+
 perfect-debounce@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/perfect-debounce/-/perfect-debounce-1.0.0.tgz#9c2e8bc30b169cc984a58b7d5b28049839591d2a"

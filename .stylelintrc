@@ -6,7 +6,10 @@
       "files": ["*.vue", "**/*.vue"],
       "rules": {
         "unit-allowed-list": ["em", "rem", "s", "px", "%", "vw", "vh"],
-        "color-hex-length": "off"
+        "color-hex-length": null,
+        "media-feature-range-notation": null,
+        "selector-pseudo-class-no-unknown": null,
+        "selector-class-pattern": null
       }
     }
   ]
