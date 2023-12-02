@@ -13,8 +13,10 @@
 import * as THREE from 'three'
 import { OrbitControls } from '@tresjs/cientos'
 // https://threejs.org/docs/#examples/en/loaders/OBJLoader
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
-import { MTLLoader } from 'three/addons/loaders/MTLLoader.js'
+// import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
+// import { MTLLoader } from 'three/addons/loaders/MTLLoader.js'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js'
 
 const {
   BasicShadowMap,

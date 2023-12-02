@@ -20,11 +20,14 @@ const percentage = ref(0)
 const loadingText = ref('加载中...')
 const objRootPath = 'http://localhost:3000/3d/'
 
+const renderer = new THREE.WebGLRenderer({ antialias: true })
+const resizeHandler = () => {
+  renderer.setSize(window.innerWidth, window.innerHeight)
+}
 const init = () => {
-  const renderer = new THREE.WebGLRenderer({ antialias: true })
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.shadowMap.enabled = false
-  document.getElementById('demo').appendChild(renderer.domElement)
+  document?.getElementById('demo')?.appendChild(renderer.domElement)
   const fov = 20 // 视野范围
   const aspect = 2 // 相机默认值 画布的宽高比
   const near = 0.1 // 近平面
@@ -35,7 +38,7 @@ const init = () => {
   // 控制相机
   const arr = [0.25, 0.03, -0.2]
   const controls = new OrbitControls(camera, renderer.domElement)
-  controls.target.set(...arr)
+  controls.target.set(arr[0], arr[1], arr[2])
   controls.update()
   // 场景
   const scene = new THREE.Scene()
@@ -178,7 +181,7 @@ const init = () => {
   const timeLine1 = gsap.timeline()
   const timeline2 = gsap.timeline()
 
-  function translateCamera(position, target, delay) {
+  function translateCamera(position: any, target: any, delay: any) {
     timeLine1.to(camera.position, {
       x: position.x,
       y: position.y,
@@ -210,9 +213,7 @@ const init = () => {
   //   console.log(camera.position);
   // }, 5000);
 
-  window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight)
-  })
+  window.addEventListener('resize', resizeHandler)
 
   function render() {
     renderer.render(scene, camera)
@@ -229,7 +230,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   // timer.value && clearInterval(timer.value)
-  window.removeEventListener('resize', null)
+  window.removeEventListener('resize', resizeHandler)
 })
 </script>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { OrbitControls } from '@tresjs/cientos'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 import * as THREE from 'three'
 // https://threejs.org/docs/#examples/en/loaders/OBJLoader
