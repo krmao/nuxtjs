@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import path from 'path'
+import path from 'path';
 
 export default defineNuxtConfig({
   ssr: true,
@@ -79,14 +79,14 @@ export default defineNuxtConfig({
           // console.log('----- viewportWidth file', filePath)
           // for mobile vant https://blog.csdn.net/YongChao_bms/article/details/132305310
           if (filePath.includes('van')) {
-            return 375
+            return 375;
           }
           // for pc
           if (filePath.includes('/src/pages/pc/')) {
-            return 1440
+            return 1440;
           }
           // for mobile
-          return 750
+          return 750;
         },
         viewportHeight: 1334, // 设计稿的视口高度
         landscape: false, // 是否添加根据 landscapeWidth 生成的媒体查询条件 @media (orientation: landscape)
@@ -96,14 +96,14 @@ export default defineNuxtConfig({
           // console.log('----- viewportWidth file', filePath)
           // for mobile vant https://blog.csdn.net/YongChao_bms/article/details/132305310
           if (filePath.includes('van')) {
-            return 375
+            return 375;
           }
           // for pc
           if (filePath.includes('/src/pages/pc/')) {
-            return 1080
+            return 1080;
           }
           // for mobile
-          return 1334
+          return 1334;
         },
         unitPrecision: 5, // 单位转换后保留的精度
         propList: ['*', '!font-size'], // 能转化为vw的属性列表,!font-size表示font-size后面的单位不会被转换
@@ -122,4 +122,4 @@ export default defineNuxtConfig({
   // https://nuxt.com.cn/docs/getting-started/deployment#%E9%80%89%E6%8B%A9%E6%80%A7%E9%A2%84%E6%B8%B2%E6%9F%93
   // nitro: undefined // 前后端分离项目不需要 nitro 插件
   // endregion
-})
+});

@@ -10,10 +10,10 @@
 </template>
 
 <script setup lang="ts">
-import * as THREE from 'three'
-import { OrbitControls } from '@tresjs/cientos'
+import * as THREE from 'three';
+import { OrbitControls } from '@tresjs/cientos';
 
-const { BasicShadowMap, BoxGeometry, Mesh, MeshBasicMaterial, NoToneMapping, SRGBColorSpace } = THREE
+const { BasicShadowMap, BoxGeometry, Mesh, MeshBasicMaterial, NoToneMapping, SRGBColorSpace } = THREE;
 
 const gl = {
   clearColor: '#82DBC5',
@@ -22,8 +22,8 @@ const gl = {
   shadowMapType: BasicShadowMap,
   outputColorSpace: SRGBColorSpace,
   toneMapping: NoToneMapping
-}
-const geometry = new BoxGeometry(1, 1, 1)
-const material = new MeshBasicMaterial({ color: '#fefefe' })
-const meshWithMaterial = new Mesh(geometry, material)
+};
+const geometry = new BoxGeometry(1, 1, 1);
+const material = new MeshBasicMaterial({ color: '#fefefe' });
+const meshWithMaterial = new Mesh(geometry, material);
 </script>

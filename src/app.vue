@@ -7,9 +7,9 @@
   </div>
 </template>
 <script setup>
-const config = useRuntimeConfig()
-console.log('> [App.vue] valueUsedOnServerSide=', config.valueUsedOnServerSide)
-console.log('> [App.vue] valueUsedOnClientSide=', config.public.valueUsedOnClientSide)
+const config = useRuntimeConfig();
+console.log('> [App.vue] valueUsedOnServerSide=', config.valueUsedOnServerSide);
+console.log('> [App.vue] valueUsedOnClientSide=', config.public.valueUsedOnClientSide);
 </script>
 <style scoped>
 .root-container {

@@ -13,31 +13,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch } from 'vue';
 
 const props = withDefaults(
   defineProps<{
-    modelValue: number
-    text: string
+    modelValue: number;
+    text: string;
   }>(),
   {
     modelValue: 0,
     text: '加载中...'
   }
-)
+);
 
-const isShow = ref(true)
+const isShow = ref(true);
 
 watch(
   () => props.modelValue,
   (val) => {
     if (val >= 100) {
       setTimeout(() => {
-        isShow.value = false
-      }, 100)
+        isShow.value = false;
+      }, 100);
     }
   }
-)
+);
 </script>
 
 <style scoped>

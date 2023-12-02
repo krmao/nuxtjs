@@ -5,5 +5,5 @@
   </div>
 </template>
 <script setup lang="ts">
-const layoutCustomProps = useAttrs()
+const layoutCustomProps = useAttrs();
 </script>
